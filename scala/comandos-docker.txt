@@ -1,0 +1,8 @@
+## Levantar la imagen
+docker-compose up --build -d
+
+## Quitar todas las imagenes que estan corriendo
+docker-compose down -v
+
+## Entrar a la terminal de la imagen 
+docker exec -it my_ubuntu_container bash
