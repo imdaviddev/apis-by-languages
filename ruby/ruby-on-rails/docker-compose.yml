@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  app:
+    image: ruby:3.2
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    command: bash -c "gem install rails && rails new . --api --skip-bundle && bundle install && rails server -b 0.0.0.0"
